@@ -1,11 +1,7 @@
 <?php
-
 /*
-
-Template Name:Offers Page
-
+Template Name: Offers Page
 */
-
 ?>
 
 <?php get_header(); ?>
