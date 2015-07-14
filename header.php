@@ -16,9 +16,12 @@
 	</head>
 
 	<body>
+	<?php /*
 	<div class="page-loader">
 		<span class="pre-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/pl.gif">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/patterns/loader-3.gif">
 		</span>
-	</div><!-- .page-loader -->
+	</div>
+	*/ ?>
+
 <?php require 'modals.php'; ?>
