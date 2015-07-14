@@ -6,6 +6,8 @@ Template Name: Offers Page
 
 <?php get_header(); ?>
 
+<?php require 'head.php'; ?>
+
 <div class="container white-bg">
 	<div class="row">
 		<div class="col-md-12">
