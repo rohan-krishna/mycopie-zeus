@@ -21,6 +21,9 @@ Template Name: Offers Page
 				<?php endwhile; endif; ?>
 			</div>
 		</div>
+		<div class="col-md-12">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/bot-banner.png" draggable="false" style="width: 90%;margin:0 auto;"/>
+		</div>
 	</div>
 	
 </div>

@@ -78,22 +78,22 @@
 		
 		<div class="f-featured-container">
   		 	<ul class="d_recognition_links">
-  		 		<li><a href="http://student.yourstory.in/2013/09/mycopie-because-notebooks-can-be-more-than-just-a-medium-of-jotting-down-notes/">
+  		 		<li class="item"><a href="http://student.yourstory.in/2013/09/mycopie-because-notebooks-can-be-more-than-just-a-medium-of-jotting-down-notes/">
 				<img src="http://mycopie.com/wp-content/uploads/2015/04/YourStory_Transparent-1.png" draggable="false" width="auto" height="65" style="margin-top: 10px;">
 			</a></li>
-  		 		<li><a href="http://economictimes.indiatimes.com/industry/et-cetera/bunkmeter-an-app-that-will-manage-students-time-off/articleshow/33275447.cms">
+  		 		<li class="item"><a href="http://economictimes.indiatimes.com/industry/et-cetera/bunkmeter-an-app-that-will-manage-students-time-off/articleshow/33275447.cms">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/media/economic.jpg" draggable="false" width="auto" height="75">
 			</a></li>
-  		 		<li><a href="http://www.bangaloremirror.com/news/state/Designer-notebooks-with-bunk-meter-and-augmented-reality/articleshow/23113284.cms">
+  		 		<li class="item"><a href="http://www.bangaloremirror.com/news/state/Designer-notebooks-with-bunk-meter-and-augmented-reality/articleshow/23113284.cms">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/media/bang.png" draggable="false" width="auto" height="75">
 			</a></li>
-  		 		<li><a href="http://mycopie.com/wp-content/uploads/2014/09/Times-of-India.jpg">
+  		 		<li class="item"><a href="http://mycopie.com/wp-content/uploads/2014/09/Times-of-India.jpg">
 				<img src="http://mycopie.com/wp-content/uploads/2015/04/unnamed.png" draggable="false" width="auto" height="75">
 			</a></li>
-				<li><a href="https://soundcloud.com/krithikad/mycopie-radio-talk">
+				<li class="item"><a href="https://soundcloud.com/krithikad/mycopie-radio-talk">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/media/ro.jpg" draggable="false" width="auto" height="75">
 			</a></li>
-				<li><a href="http://mycopie.com/wp-content/uploads/2014/09/The-Hindu.jpg">
+				<li class="item"><a href="http://mycopie.com/wp-content/uploads/2014/09/The-Hindu.jpg">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/media/hindu.jpg" draggable="false" width="auto" height="75">
 			</a></li>
   		 	</ul>
