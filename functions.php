@@ -20,7 +20,10 @@ function mytheme_js()
  wp_deregister_script('jquery');  
  wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');  
  wp_enqueue_script('jquery');  
-   
+  
+ wp_deregister_script('swfobject');  
+ wp_register_script('swfobject', 'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js');  
+ wp_enqueue_script('swfobject');  
  
  wp_register_script('homebrew', get_stylesheet_directory_uri() . '/js/homebrew.js');
  wp_enqueue_script('homebrew');
@@ -28,12 +31,47 @@ function mytheme_js()
  wp_register_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
  wp_enqueue_script('bootstrap-js');
  
+ wp_register_script('slippry',get_stylesheet_directory_uri() . '/js/slippry.js');
+ wp_enqueue_script('slippry'); 
+ 
+ wp_register_script( 'impress-js' , get_stylesheet_directory_uri() . '/js/impress.js' );
+ wp_enqueue_script( 'impress-js' );
+
+ wp_register_script( 'slick-js' , get_stylesheet_directory_uri() . '/js/slick.min.js' );
+ wp_enqueue_script( 'slick-js' );
+
+ wp_register_script( 'classie-js' , get_stylesheet_directory_uri() . '/js/classie.js' );
+ wp_enqueue_script( 'classie-js' );
+
+wp_register_script( 'owl-js' , get_stylesheet_directory_uri() . '/js/owl.carousel.min.js' );
+ wp_enqueue_script( 'owl-js' );
+ 
+ wp_register_script( 'slim-js' , get_stylesheet_directory_uri() . '/js/slimScroll.js' );
+ wp_enqueue_script( 'slim-js' );
+
+wp_register_script( 'stick-js' , get_stylesheet_directory_uri() . '/js/jquery.sticky.js' );
+ wp_enqueue_script( 'stick-js' );
+
+wp_register_script( 'easing-js' , get_stylesheet_directory_uri() . '/js/jquery.easings.min.js' );
+ wp_enqueue_script( 'easing-js' );
+
+ wp_register_script( 'stack-js' , get_stylesheet_directory_uri() . '/js/jquery.stackslider.js' );
+ wp_enqueue_script( 'stack-js' );
+
+ wp_register_script( 'tabs-js' , get_stylesheet_directory_uri() . '/js/jquery.easytabs.js' );
+ wp_enqueue_script( 'tabs-js' );
  
 
  //Various Stylesheets
 
  wp_register_style( 'screen-css' , get_stylesheet_directory_uri() . '/style.css');
  wp_enqueue_style( 'screen-css');
+
+ wp_register_style( 'slippry-css' , get_stylesheet_directory_uri() . '/slippry.css');
+ wp_enqueue_style( 'slippry-css');
+ 
+ wp_register_style( 'slick-css' , get_stylesheet_directory_uri() . '/slick.css');
+ wp_enqueue_style( 'slick-css');
  
  wp_register_style( 'animate-css' , get_stylesheet_directory_uri() . '/animate.css');
  wp_enqueue_style( 'animate-css');
@@ -74,6 +112,32 @@ $args = array(
 	);
 register_sidebar( $args );
 
+//Adding WooCommerce Support
+//add_theme_support( 'woocommerce' );
+
+require_once('wp_bootstrap_navwalker.php');
+
+//Special Nav Class
+/*
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class($classes, $item){
+     if( in_array('current', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+// Filter wp_nav_menu() to add profile link
+add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link' );
+function my_nav_menu_profile_link($menu) { 	
+	if (!is_user_logged_in())
+		return $menu;
+	else
+		$profilelink = '<li><a href="' . bp_loggedin_user_domain( '/' ) . '">' . __('Profile') . '</a></li>';
+		$menu = $menu . $profilelink;
+		return $menu;
+}
+*/
 
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
@@ -144,9 +208,9 @@ add_shortcode("flipper","ImgFlipper");
  add_theme_support( 'post-thumbnails' );
 
 //Custom Meta Box for Books-Avail
+add_action('admin_init','mcp_meta_box_init');
 
 //Metabox information for adding the metabox and saving the data
-/*
 function mcp_meta_box_init() {
 	//create custom meta box
 	add_meta_box('mcp-meta','Product Buy Now Link', 'mcp_meta_box' , 'post' ,'side','default' );
@@ -168,7 +232,6 @@ function mcp_save_meta_box($post_id,$post) {
 
 		update_post_meta($post_id,'_mcp_link',esc_attr($_POST['mcp_link']));
 }
-
 
 /**
  * Determine whether blog/site has more than one category.
