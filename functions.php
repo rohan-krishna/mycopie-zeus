@@ -144,8 +144,9 @@ add_shortcode("flipper","ImgFlipper");
  add_theme_support( 'post-thumbnails' );
 
 //Custom Meta Box for Books-Avail
+/*
 add_action('admin_init','mcp_meta_box_init');
-
+*/
 //Metabox information for adding the metabox and saving the data
 /*
 function mcp_meta_box_init() {
