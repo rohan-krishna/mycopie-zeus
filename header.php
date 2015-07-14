@@ -16,31 +16,9 @@
 	</head>
 
 	<body>
-	<?php /*
 	<div class="page-loader">
 		<span class="pre-img">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/patterns/loader-3.gif">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/pl.gif">
 		</span>
-	</div>
-	*/ ?>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=270916276449286&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript">
-window.twttr = (function (d, s, id) {
-  var t, js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src= "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-}(document, "script", "twitter-wjs"));
-</script>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+	</div><!-- .page-loader -->
 <?php require 'modals.php'; ?>

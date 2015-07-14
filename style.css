@@ -500,31 +500,37 @@ body {
 
 	width: 100%;
 
+	display: block;
+
 	min-height: 100%;
 
-	position: absolute;
+	position: fixed;
 
 	top: 0;
 
 	left: 0;
 
-	z-index: 1002;
+	z-index: 99999;
 
-	overflow: hidden;
+	overflow-y: hidden;
+
+	background: #fff;
 
 }
 
 .pre-img {
 
-	position: absolute;
+	display: inline-block;
 
-	top: 40%;
-
-	left: 48%;
-
-	z-index: 1003;
+	margin: 0 auto;
 
 	overflow: hidden;
+
+	position: absolute;
+
+	top : 45%;
+
+	left: 49%;
 
 }
 

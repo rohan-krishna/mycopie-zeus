@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	$('#tabsContainer').easytabs();
 
 	$('#betaAjax').click(function() {
 		$('.mast-header').hide();
@@ -15,7 +14,11 @@ $(document).ready(function() {
 		$('.mast-header').show();
 	});
 
-	$('#UnruledBooks').owlCarousel();
+
+
+	$(window).load(function() {
+		$('.page-loader').fadeOut(3000);
+	});
 
 	//Incoming Transitions
 	/*
@@ -221,7 +224,6 @@ $(function() {
  //About Us Hint
  //Blimp Effect
  //Scroll Header Effect
-
 
 
 
