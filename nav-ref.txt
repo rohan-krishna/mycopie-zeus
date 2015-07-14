@@ -1,0 +1,6 @@
+Profile : http://localhost/wp/members/admin/
+Notifications : http://localhost/wp/members/admin/notifications/
+Messages : http://localhost/wp/members/admin/messages/
+Friends : http://localhost/wp/members/admin/friends/
+Album : http://localhost/wp/members/admin/album/
+Settings : http://localhost/wp/members/admin/settings/
